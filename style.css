@@ -1,26 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
 
+:root {
+    --cor-primaria: orange;
+    --cor-hover: rgb(171, 113, 6);
+    --cor-escura: #333;
+    --cor-clara: #f9f9f9;
+    --fonte-principal: 'Josefin Sans', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--fonte-principal);
 }
 
 body {
-    color: #333;
+    color: var(--cor-escura);
     line-height: 1.6;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--cor-primaria);
 }
 
-/* Estilos do cabeçalho */
 header {
     background-color: #000;
-    color: orange;
+    color: var(--cor-primaria);
     padding: 1rem 0;
     top: 0;
     z-index: 100;
@@ -30,6 +37,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -39,12 +47,11 @@ nav a {
 }
 
 nav a:hover {
-    color:rgb(171, 113, 6);
+    color: var(--cor-hover);
     border-radius: 4px;
 }
 
-/* Estilos da seção hero */
-.hero {
+.main {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
@@ -58,12 +65,12 @@ nav a:hover {
     padding: 0 1rem;
 }
 
-.hero h1 {
+.main h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-.hero p {
+.main p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     max-width: 800px;
@@ -71,7 +78,7 @@ nav a:hover {
 
 .btn {
     display: inline-block;
-    background-color: rgb(249, 162, 2);
+    background-color: var(--cor-primaria);
     color: white;
     padding: 0.8rem 2rem;
     border-radius: 4px;
@@ -80,22 +87,21 @@ nav a:hover {
 }
 
 .btn:hover {
-    background-color: rgb(171, 113, 6);
+    background-color: var(--cor-hover);
     transform: translateY(-3px);
 }
 
-/* Estilos da seção cardápio */
+.titulo-secao {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: white;
+}
+
 .cardapio {
     padding: 4rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.cardapio h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: black;
 }
 
 .pizzas {
@@ -105,7 +111,7 @@ nav a:hover {
 }
 
 .pizza-item {
-    background-color: #f9f9f9;
+    background-color: var(--cor-clara);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -146,70 +152,76 @@ nav a:hover {
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    color:white ;
+    color:white;
 }
 
-.sobre h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.sobre p{
+.sobre p {
     font-size: 1.1rem;
     text-align: center;
     margin-top: 20px;
 }
 
 .contato {
-    padding: 4rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
 }
 
-.contato h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #d32f2f;
+#titulo-contato{
+    color: black;
 }
 
-.contato-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.descricao {
+    font-size: 1em;
+    margin-bottom: 30px;
+    color: var(--cor-escura);
 }
 
-.contato-item {
-    margin-bottom: 1.5rem;
+.info {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
-.contato-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    color: #d32f2f;
+.info p {
+    width: 45%;
+    line-height: 1.5;
 }
 
-/* Estilos do rodapé */
+.horario {
+    font-style: italic;
+}
+
+.horario p {
+    line-height: 1.5;
+}
+
+#email{
+    text-decoration: underline;
+}
+
+#email:hover{
+    color: var(--cor-hover);
+}
+
 footer {
-    background-color: #333;
+    background-color: var(--cor-escura);
     color: white;
     text-align: center;
     padding: 2rem 1rem;
     margin-top: 2rem;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
-    .hero h1 {
+    .main h1 {
         font-size: 2.5rem;
     }
-    
-    .hero p {
+
+    .main p {
         font-size: 1.2rem;
     }
-    
+
     nav {
         flex-direction: column;
         align-items: center;

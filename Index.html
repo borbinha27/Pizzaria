@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-
     <title>Alessio's Pizzaria</title>
 </head>
 <body>
@@ -17,62 +16,57 @@
             <a href="#contato">Contato</a>
         </nav>
     </header>
-    
-    <section id="home" class="hero">
-        <h1>Bem-vindo à Alessio's</h1>
-        <p>Saborosa pizza, feitas especialmente para você!</p>
-        <a href="#cardapio" class="btn">Ver Cardápio</a>
-    </section>
-    
-    <section id="cardapio" class="cardapio">
-        <h2>Cardápio</h2>
-        <div class="pizzas">
-            <div class="pizza-item">
-                <div class="pizza-img pizza-margherita"></div>
-                <div class="pizza-info">
-                    <h3>Pizza Margherita</h3>
-                    <p>Molho de tomate, mussarela, manjericão fresco.</p>
-                </div>
+
+    <main>
+        <section id="home" class="main">
+            <h1>Bem-vindo à Alessio's</h1>
+            <p>Saborosa pizza, feitas especialmente para você!</p>
+            <a href="#cardapio" class="btn">Ver Cardápio</a>
+        </section>
+
+        <section id="cardapio" class="cardapio">
+            <h2 class="titulo-secao">Cardápio</h2>
+            <div class="pizzas">
+                <article class="pizza-item">
+                    <div class="pizza-img pizza-margherita" aria-label="Imagem da Pizza Margherita"></div>
+                    <div class="pizza-info">
+                        <h3>Pizza Margherita</h3>
+                        <p>Molho de tomate, mussarela, manjericão fresco.</p>
+                    </div>
+                </article>
+                <article class="pizza-item">
+                    <div class="pizza-img pizza-pepperoni" aria-label="Imagem da Pizza Pepperoni"></div>
+                    <div class="pizza-info">
+                        <h3>Pizza Pepperoni</h3>
+                        <p>Molho de tomate, pepperoni, queijo mussarela.</p>
+                    </div>
+                </article>
             </div>
-            <div class="pizza-item">
-                <div class="pizza-img pizza-pepperoni"></div>
-                <div class="pizza-info">
-                    <h3>Pizza Pepperoni</h3>
-                    <p>Molho de tomate, pepperoni, queijo mussarela.</p>
-                </div>
+        </section>
+
+        <section id="sobre" class="sobre">
+            <h2 class="titulo-secao">Sobre Nós</h2>
+            <p>Nossa pizzaria é dedicada a criar as melhores pizzas do mundo, com ingredientes frescos e receitas exclusivas.</p>
+        </section>
+
+        <section id="contato" class="contato">
+            <h2 id='titulo-contato'class="titulo-secao">Contato</h2>
+            <p class="descricao">Entre em contato conosco para fazer pedidos ou tirar suas dúvidas.</p>
+
+            <div class="info">
+                <p><strong>Endereço:</strong> Avenida Onze de Outubro, nº 123<br>
+                Centro, Cidade Qualquer/RJ CEP: 12345-678</p>
+                <p><strong>Telefone:</strong> (11) 5555-5555<br>
+                <strong>E-mail:</strong> <a id="email" href="a">contato@alessios.pizza</a></p>
             </div>
-        </div>
-    </section>
-    
-    <section id="sobre" class="sobre">
-            <h2>Sobre Nós</h2>
-            <p>Nossa pizzaria é dedicada a criar as melhores pizzas do mundo, com ingredientes frescos e receitas exclusivas.</p>     
-    </section>
-    
-    <section id="contato" class="contato">
-        <h2>Contato</h2>
-        <p>Entre em contato conosco para fazer pedidos ou tirar suas dúvidas.</p>
-        
-        <div class="contato-info">
-            <div class="contato-item">
-                <h3>Endereço</h3>
-                <p>Avenida Onze de Outubro, nº 123<br>Centro, Cidade Qualquer/RJ CEP: 12345-678</p>
+
+            <div class="horario">
+                <p><strong>Horário de Funcionamento:</strong><br>
+                Segunda a Sábado: 11h00 às 23h00 - Domingo: 16h00 às 23h00</p>
             </div>
-            <div class="contato-item">
-                <h3>Telefone</h3>
-                <p>(11) 5555-5555</p>
-            </div>
-            <div class="contato-item">
-                <h3>E-mail</h3>
-                <p>contato@dlessios.pizza</p>
-            </div>
-            <div class="contato-item">
-                <h3>Horário de Funcionamento</h3>
-                <p>Segunda a Sábado: 11h00 às 23h00<br>Domingo: 16h00 às 23h00</p>
-            </div>
-        </div>
-    </section>
-    
+        </section>
+    </main>
+
     <footer>
         <p>© 2024 Alessio's Pizzaria</p>
     </footer>
