@@ -1,74 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <title>Alessio's Pizzaria</title>
-</head>
-<body>
-    <header> 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#cardapio">Cardápio</a>
-            <a href="#sobre">Sobre Nós</a>
-            <a href="#contato">Contato</a>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Borba's Pizzaria</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </header>
 
     <main>
-        <section id="home" class="main">
-            <h1>Bem-vindo à Alessio's</h1>
-            <p>Saborosa pizza, feitas especialmente para você!</p>
-            <a href="#cardapio" class="btn">Ver Cardápio</a>
-        </section>
+      <section id="home" class="main">
+        <h1>Bem-vindo à Borba's</h1>
+        <p>Saborosa pizza, feitas especialmente para você!</p>
+        <a href="#cardapio" class="btn">Ver Cardápio</a>
+      </section>
 
-        <section id="cardapio" class="cardapio">
-            <h2 class="titulo-secao">Cardápio</h2>
-            <div class="pizzas">
-                <article class="pizza-item">
-                    <div class="pizza-img pizza-margherita" aria-label="Imagem da Pizza Margherita"></div>
-                    <div class="pizza-info">
-                        <h3>Pizza Margherita</h3>
-                        <p>Molho de tomate, mussarela, manjericão fresco.</p>
-                    </div>
-                </article>
-                <article class="pizza-item">
-                    <div class="pizza-img pizza-pepperoni" aria-label="Imagem da Pizza Pepperoni"></div>
-                    <div class="pizza-info">
-                        <h3>Pizza Pepperoni</h3>
-                        <p>Molho de tomate, pepperoni, queijo mussarela.</p>
-                    </div>
-                </article>
+      <section id="cardapio" class="cardapio">
+        <h2 class="titulo-secao">Cardápio</h2>
+        <div class="pizzas">
+          <article class="pizza-item">
+            <div
+              class="pizza-img pizza-margherita"
+              aria-label="Imagem da Pizza Margherita"
+            ></div>
+            <div class="pizza-info">
+              <h3>Pizza Margherita</h3>
+              <p>Molho de tomate, mussarela, manjericão fresco.</p>
             </div>
-        </section>
-
-        <section id="sobre" class="sobre">
-            <h2 class="titulo-secao">Sobre Nós</h2>
-            <p>Nossa pizzaria é dedicada a criar as melhores pizzas do mundo, com ingredientes frescos e receitas exclusivas.</p>
-        </section>
-
-        <section id="contato" class="contato">
-            <h2 id='titulo-contato'class="titulo-secao">Contato</h2>
-            <p class="descricao">Entre em contato conosco para fazer pedidos ou tirar suas dúvidas.</p>
-
-            <div class="info">
-                <p><strong>Endereço:</strong> Avenida Onze de Outubro, nº 123<br>
-                Centro, Cidade Qualquer/RJ CEP: 12345-678</p>
-                <p><strong>Telefone:</strong> (11) 5555-5555<br>
-                <strong>E-mail:</strong> <a id="email" href="a">contato@alessios.pizza</a></p>
+          </article>
+          <article class="pizza-item">
+            <div
+              class="pizza-img pizza-pepperoni"
+              aria-label="Imagem da Pizza Pepperoni"
+            ></div>
+            <div class="pizza-info">
+              <h3>Pizza Pepperoni</h3>
+              <p>Molho de tomate, pepperoni, queijo mussarela.</p>
             </div>
+          </article>
+        </div>
+      </section>
 
-            <div class="horario">
-                <p><strong>Horário de Funcionamento:</strong><br>
-                Segunda a Sábado: 11h00 às 23h00 - Domingo: 16h00 às 23h00</p>
-            </div>
-        </section>
+      <section id="sobre" class="sobre">
+        <h2 class="titulo-secao">Sobre Nós</h2>
+        <p>
+          Nossa pizzaria é dedicada a criar as melhores pizzas do mundo, com
+          ingredientes frescos e receitas exclusivas.
+        </p>
+      </section>
+
+      <section class="sugestao">
+        <h2 id="titulo-preto" class="titulo-secao">
+          Envie sua sugestão de pizza
+        </h2>
+        <form>
+          <label for="tipo">Tipo de Pizza:</label>
+          <select name="tipo" id="tipo">
+            <option>Salgada</option>
+            <option>Doce</option>
+          </select>
+      
+          <label for="nome">Descrição da pizza:</label>
+          <input type="text" name="nome" id="nome" />
+      
+          <p>Ingredientes obrigatórios:</p>
+          <label><input type="checkbox" name="queijo" /> Queijo</label>
+          <label><input type="checkbox" name="molho" /> Molho de tomate</label>
+          <label><input type="checkbox" name="massa" /> Massa com glúten</label>
+      
+          <label for="valor">Valor sugerido:</label>
+          <input type="number" name="valor" id="valor" min="20" max="1000" />
+      
+          <input id="botao-azul" type="submit" value="Enviar" />
+        </form>
+      </section>
+      
+
+      <section id="contato" class="contato">
+        <h2 id="titulo-preto" class="titulo-secao">Contato</h2>
+        <p class="descricao">
+          Entre em contato conosco para fazer pedidos ou tirar suas dúvidas.
+        </p>
+
+        <div class="info">
+          <p>
+            <strong>Endereço:</strong> Avenida Onze de Outubro, nº 123<br />
+            Centro, Cidade Qualquer/RJ CEP: 12345-678
+          </p>
+          <p>
+            <strong>Telefone:</strong> (11) 5555-5555<br />
+            <strong>E-mail:</strong>
+            <a id="email" href="a">contato@borbas.pizza</a>
+          </p>
+        </div>
+
+        <div class="horario">
+          <p>
+            <strong>Horário de Funcionamento:</strong><br />
+            Segunda a Sábado: 11h00 às 23h00 - Domingo: 16h00 às 23h00
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>© 2024 Alessio's Pizzaria</p>
+      <p>© 2024 Borba's Pizzaria</p>
     </footer>
-</body>
+  </body>
 </html>
